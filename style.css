@@ -1,0 +1,70 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.header {
+  text-align: center;
+  background-color: black;
+  padding: 10px;
+  margin: 3px 10px;
+  color: white;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 217, 255);
+}
+.container {
+  padding: 10px;
+  margin: 10px;
+  background-color: black;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 217, 255);
+}
+.comment-section {
+  display: flex;
+  flex-direction: column;
+}
+.new-comment {
+  margin: 5px;
+  width: 500px;
+  height: 50px;
+}
+button {
+  width: 50px;
+  height: 25px;
+  padding: 3px;
+  margin: 3px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  font-weight: bolder;
+  border: 3px solid rgb(255, 0, 0);
+}
+textarea {
+  display: block;
+  border-radius: 3px;
+  padding: 15px;
+  border: 3px solid rgb(255, 0, 0);
+}
+span {
+  background-color: black;
+  color: white;
+  padding: 2px;
+  border-radius: 8px;
+}
+.new-comment-section {
+  margin-top: 8px;
+  padding: 3px;
+  background-color: black;
+  border-radius: 10px;
+}
+.child-comment-section {
+  margin: 3px 20px;
+  background-color: black;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px solid rgb(0, 217, 255);
+}
+.new-text-area {
+  width: 300px;
+  margin: 3px;
+}
