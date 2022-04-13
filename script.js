@@ -3,7 +3,8 @@ const textArea = document.getElementById("text-area");
 const addBtn = document.getElementById("add");
 
 addBtn.onclick = () => {
-  if (!textArea.value) {
+  if (!textArea.value.trim()) {
+    textArea.value = "";
     alert("Please Enter Your Comment!!");
   } else {
     add(commentSection, textArea);
@@ -58,6 +59,7 @@ const reply = (parent, button) => {
 
     const newTextArea = document.createElement("textarea");
     newTextArea.setAttribute("class", "new-text-area");
+    newTextArea.setAttribute("placeholder", "Enter your reply");
     childCommentSection.appendChild(newTextArea);
 
     const childAdd = document.createElement("button");
@@ -65,14 +67,15 @@ const reply = (parent, button) => {
     childCommentSection.appendChild(childAdd);
 
     childAdd.onclick = () => {
-      if (!newTextArea) {
+      if (!newTextArea.value.trim()) {
+        newTextArea.value = "";
         alert("Please Enter Your Comment!!");
       } else {
         newTextArea.remove();
         childAdd.remove();
         cancel.remove();
+        add(childCommentSection, newTextArea);
       }
-      add(childCommentSection, newTextArea);
     };
 
     const cancel = document.createElement("button");
